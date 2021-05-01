@@ -5,18 +5,40 @@
  */
 package paquete1;
 
-import Paquete2.Vehiculo;
-
-
-
 /**
  *
  * @author Usuario iTC
  */
 public class Ejecutor {
-    public static void main(String[] args) {
-        Vehiculo vehiculo = new Vehiculo();
-        vehiculo.calcularValorMatricula();
-        System.out.println(vehiculo.toString());
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {  
+         
+
+        String cedula = "1104803620";
+        String marca = "Toyota";
+        int anoFabricante = 2019; 
+        double valorVehiculo = 40000;
+        
+        Automotor automotor = new Automotor(cedula, marca, anoFabricante, valorVehiculo);
+        
+        automotor.establecerValorMatricula();
+        
+        System.out.println("");
+        System.out.printf("%s\n",automotor);
+        
+        String cedula1 = "1102560354";
+        String marca1 = "Ford Ranger";
+        int anoFabricante1 = 2020; 
+        double valorVehiculo1 = 100000;
+        
+        Automotor automotor2 = new Automotor(cedula1, marca1, anoFabricante1, valorVehiculo1);
+        
+        automotor2.establecerValorMatricula();
+        
+        System.out.println("");
+        System.out.printf("%s\n",automotor2);
     }
 }
